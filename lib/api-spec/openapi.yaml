@@ -393,7 +393,14 @@ paths:
                 items:
                   $ref: "#/components/schemas/ActivityItem"
 
+security:
+  - bearerAuth: []
+
 components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
   schemas:
     HealthStatus:
       type: object
